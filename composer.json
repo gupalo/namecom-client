@@ -1,0 +1,38 @@
+{
+    "name": "gupalo/namecom-client",
+    "description": "Name.com Domain Registrar API Client",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "ext-intl": "*",
+        "ext-json": "*",
+        "gupalo/dateutils": "^1.1",
+        "gupalo/uidgenerator": "^1.0",
+        "symfony/http-client": "^5.1"
+    },
+    "require-dev": {
+        "phpspec/prophecy-phpunit": "^2.0",
+        "phpunit/phpunit": "^9.1"
+    },
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        },
+        "platform": {
+            "php": "7.4.6"
+        },
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Gupalo\\NamecomClient\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Gupalo\\NamecomClient\\": "tests/"
+        }
+    }
+}

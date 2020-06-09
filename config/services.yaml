@@ -1,0 +1,18 @@
+parameters:
+    env(NAMECOM_API_BASE_URL):  'https://api.name.com/v4/' # use for dev 'https://api.dev.name.com/v4/'
+    env(NAMECOM_API_USERNAME):  'testuser'
+    env(NAMECOM_API_KEY):       '1234567890abcdef'
+
+services:
+    # common
+    Gupalo\NamecomClient\:
+        resource: '%kernel.project_dir%/vendor/gupalo/namecom-client/src/*'
+        public: true
+        autowire: true
+
+    Gupalo\NamecomClient\Http\ApiClient:
+        shared: false
+        bind:
+            $baseUrl: '%env(string:NAMECOM_API_BASE_URL)%'
+            $username: '%env(string:NAMECOM_API_USERNAME)%'
+            $key: '%env(string:NAMECOM_API_KEY)%'
