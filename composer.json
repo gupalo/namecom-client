@@ -14,7 +14,8 @@
     },
     "require-dev": {
         "phpspec/prophecy-phpunit": "^2.0",
-        "phpunit/phpunit": "^9.1"
+        "phpunit/phpunit": "^9.1",
+        "symfony/console": "^5.1"
     },
     "config": {
         "preferred-install": {
